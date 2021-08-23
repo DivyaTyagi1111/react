@@ -10,8 +10,7 @@ function WeatherDisplay(){
     let [loader, setLoader] = useState(true)
 
     const dateHandler = (e) => {
-        let api = 'http://api.weatherapi.com/v1/astronomy.json?key=cec4cad6bf2f4df6bc241617212108&q=INDIA&dt='
-        api = api.concat(e.target.value)
+        let api = `http://api.weatherapi.com/v1/astronomy.json?key=cec4cad6bf2f4df6bc241617212108&q=INDIA&dt=${e.target.value}`
         console.log(api)
         axios.get(api)
         .then(response => response.data.astronomy.astro)

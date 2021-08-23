@@ -34,6 +34,7 @@ function RandomImage() {
     //   console.log(data[0].url);
     //   setimg_src(data[0].url);
     // })
+    
 
     // with axios
     
@@ -41,7 +42,7 @@ function RandomImage() {
     .then(response => response.data)
     .then((data) => {
       setLoader(false)
-      console.log(data[0].url);
+      // console.log(data[0].url);
       setimg_src(data[0].url);
     })
     setLoader(true);
@@ -62,7 +63,7 @@ function RandomImage() {
     <>
       <button onClick = {random_img}>Click Me</button>
       <br/>
-      <img src={img_src} alt='try' style={imgStyle}/>
+  <img src={img_src} alt='try' style={imgStyle}/>
     </>
   );
 }

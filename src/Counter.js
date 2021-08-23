@@ -4,7 +4,8 @@ const divStyle = {
   display:"flex"
 };
 const h3Style = {
-  padding:"1rem"
+  padding:"2rem",
+  fontSize:"2rem"
 };
 
 function Counter() {
