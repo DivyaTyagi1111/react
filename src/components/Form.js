@@ -1,3 +1,5 @@
+import Button from "./Button"
+
 function Form(props){
 
     const inputHandler=(e)=>props.setInput(e.target.value)
@@ -21,9 +23,7 @@ function Form(props){
                     <option key={todo.id} value={todo.input}/>
                 ))}
             </datalist>
-            <button className='todo-button' type='submit' onClick = {submitHandler}>
-                <i className='fas fa-plus-square'></i>
-            </button>
+            <Button className='todo-button' onClick={submitHandler} type='submit'/>
             <div className = 'todos'>
                 <select name='todos' className ='todo-filter' onChange={filterHandler}>
                     <option value = 'all'>All</option>

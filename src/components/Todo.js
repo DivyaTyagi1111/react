@@ -1,4 +1,6 @@
 
+import Button from './Button'
+
 function Todo({input, todo, setTodos, todos}){
 
     const deleteHandler=(e)=>{
@@ -19,12 +21,8 @@ function Todo({input, todo, setTodos, todos}){
             <li className='todo-item'>
                 {input}
             </li>
-            <button className='checked' onClick={checkHandler}>
-                <i className="fas fa-check"></i>
-            </button>
-            <button className='deleted' onClick={deleteHandler}>
-                <i className="fas fa-trash"></i>
-            </button>
+            <Button className='checked' onClick={checkHandler}/>
+            <Button className='deleted' onClick={deleteHandler}/>
         </div>
     )
 }
