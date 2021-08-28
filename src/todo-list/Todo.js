@@ -1,4 +1,3 @@
-
 import Button from './Button'
 
 function Todo({input, todo, setTodos, todos}){

@@ -1,0 +1,8 @@
+.contact-div {
+    display: flex;
+    margin: 0.75rem;
+    margin-top: 1rem;
+    width: 11rem;
+    justify-content:space-evenly;
+}
+

@@ -1,23 +1,24 @@
 import Button from "./Button"
+import {useRef} from 'react'
 
 function Form(props){
-
-    const inputHandler=(e)=>props.setInput(e.target.value)
+    const inp=useRef()
 
     const submitHandler=(e)=>{
         e.preventDefault()
+        const input=inp.current.value
         props.setTodos([
             ...props.todos, 
-            { input:props.input, completed:false, id:Math.floor(Math.random()*1000) }
+            { input:input, completed:false, id:Math.floor(Math.random()*1000) }
         ])
-        props.setInput('')
+        inp.current.value=null
     }
 
     const filterHandler=(e)=>props.setFilter(e.target.value)
     
     return (
         <form>
-            <input type='text' value={props.input} onChange = {inputHandler} className='todo-input' list='todo-suggestions'/>
+            <input ref={inp} type='text' className='todo-input' list='todo-suggestions'/>
             <datalist id='todo-suggestions' autoComplete='off'>
                 {props.todos.map(todo=>(
                     <option key={todo.id} value={todo.input}/>

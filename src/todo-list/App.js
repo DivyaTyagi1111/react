@@ -6,9 +6,8 @@ import './App.css'
 
 function App(){
 
-    const [input, setInput] = useState('')
-    const [todos, setTodos] = useState(getLocalTodos())
-    const [filter, setFilter] =useState('all')
+    const [todos, setTodos]=useState(getLocalTodos())
+    const [filter, setFilter]=useState('all')
     
     function getLocalTodos(){
         if(localStorage.getItem('todos') == null)
@@ -24,8 +23,6 @@ function App(){
                 <h1>Todo List</h1>
             </header>
             <Form 
-            setInput={setInput}
-            input={input}
             setTodos={setTodos} 
             todos={todos}
             setFilter={setFilter}/>

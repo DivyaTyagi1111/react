@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 // import Counter from './Counter';
 // import RandomImage from './RandomImage';
 // import WeatherDisplay from './WeatherDisplay'
-import App from './components/App'
+// import App from './todo-list/App'
+import App from './contacts/App'
+
 
 
 ReactDOM.render(
