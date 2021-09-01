@@ -10,6 +10,7 @@ function App(){
     const mail_ref=useRef()
 
     const [contact, setContact]=useState([])
+    const [detail, setDetail] = useState({})
 
     async function getData(){
         const response=await fetch(URL)
@@ -48,7 +49,7 @@ function App(){
             <label htmlFor='mail'>Email :  </label>
             <input ref={mail_ref} name='mail' type='text'/>
             <button onClick={addHandler}>Add</button>
-            <Contact contact={contact} getData={getData}/>
+            <Contact contact={contact} getData={getData} detail={detail} setDetail={setDetail}/>
         </>
     )
 }
